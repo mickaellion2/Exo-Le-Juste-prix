@@ -15,6 +15,7 @@
 		let random = parseFloat(Math.random() * (prix_maximum - prix_minimum) + prix_maximum);
 		let justePrix = random.toFixed(2);
 		justePrix = Number.parseFloat(justePrix);
+		console.log(justePrix);
 
 		while (proposition != justePrix){
 			if (iterations != 0) {
