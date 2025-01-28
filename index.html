@@ -15,7 +15,7 @@
 		let random = parseFloat(Math.random() * (prix_maximum - prix_minimum) + prix_maximum);
 		let justePrix = random.toFixed(2);
 		justePrix = Number.parseFloat(justePrix);
-		
+
 		while (proposition != justePrix){
 			if (iterations != 0) {
 				if (proposition<justePrix) 
@@ -36,15 +36,15 @@
 
 		if (victoire) {
 			alert("Bravo ! Vous avez trouvé le juste prix !");
-			document.getElementById('fond').append('<img src="https://images.gamebanana.com/img/ss/mods/59d1a23b90616.webp" height="1920px" width="1080px">');
+			document.getElementById('fond').src="https://images.gamebanana.com/img/ss/mods/59d1a23b90616.webp";
 		} else {
 			alert("Bouh ! Tu as perdu !");
-			document.getElementById('fond').append('<img src="https://i.imgur.com/ZhW7RcH.jpg" height="1920px" width="1080px">');
+			document.getElementById('fond').src="https://i.imgur.com/ZhW7RcH.jpg";
 		}
 	</script>
 </head>
 <body>
-	<div id="fond" style="width:100%"></div>
+	<div id="fond" style="width:100%"><img src="" height="1920px" width="1080px"></div>
 
 </body>
 </html>
