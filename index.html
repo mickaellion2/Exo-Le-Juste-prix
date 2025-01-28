@@ -4,11 +4,15 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Exo Juste Prix</title>
+</head>
+<body>
+	<img id="victoire" style="width:100%; display: none;" src="https://images.gamebanana.com/img/ss/mods/59d1a23b90616.webp" height="1920px" width="1080px">
+	<img id="defaite" style="width:100%; display: none;" src="https://i.imgur.com/ZhW7RcH.jpg" height="1920px" width="1080px">
 	<script type="text/javascript">
 		let proposition;
 		let proposition_prec;
-		let prix_minimum = prompt("Quel est le prix MINimum ? (parce que je suis gentil, je vous laisse choisir l'intervalle)"); ;
-		let prix_maximum = prompt("Quel est le prix MAXimum ? (parce que je suis gentil, je vous laisse choisir l'intervalle)"); ;
+		let prix_minimum = prompt("Quel est le prix MINimum ? (parce que je suis gentil, je vous laisse choisir l'intervalle)");
+		let prix_maximum = prompt("Quel est le prix MAXimum ? (parce que je suis gentil, je vous laisse choisir l'intervalle)");
 		let iterations = 0;
 		let victoire = true;
 
@@ -27,25 +31,22 @@
 			else{
 				proposition = prompt("Devinez le juste prix !");
 			}
-			proposition_prec = proposition;
-			iterations++;
+			
 			if (iterations > 3) {
 				victoire = false;
 				break;
 			}
+			proposition_prec = proposition;
+			iterations++;
 		}
 
 		if (victoire) {
 			alert("Bravo ! Vous avez trouvé le juste prix !");
-			document.getElementById('fond').src="https://images.gamebanana.com/img/ss/mods/59d1a23b90616.webp";
+			document.getElementById('victoire').style.display = "block";
 		} else {
 			alert("Bouh ! Tu as perdu !");
-			document.getElementById('fond').src="https://i.imgur.com/ZhW7RcH.jpg";
+			document.getElementById('defaite').style.display = "block";
 		}
 	</script>
-</head>
-<body>
-	<div id="fond" style="width:100%"><img src="" height="1920px" width="1080px"></div>
-
 </body>
 </html>
